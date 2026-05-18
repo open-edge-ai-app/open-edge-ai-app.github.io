@@ -199,41 +199,78 @@
         id="features"
         aria-label="Feature definitions"
       >
-        <div class="feature-definition-header">
-          <div>
-            <p class="section-label">Feature definitions</p>
-            <h2>What the project means by local-first AI.</h2>
-          </div>
-          <p>
-            These are not marketing buckets. Each feature maps to a visible app
-            surface and a native implementation area in the repository.
-          </p>
-        </div>
-
-        <div class="feature-layout">
-          <div class="feature-definition-grid">
-            <article class="definition-card">
-              <div class="definition-index">01</div>
-              <h3>Local-first chat workspace</h3>
+        <div class="feature-composition">
+          <article class="feature-visual-card">
+            <div class="feature-card-copy">
+              <p class="section-label">Feature definitions</p>
+              <h2>Feature definitions for a local-first AI workspace.</h2>
               <p>
-                A React Native chat shell for private sessions, model selection,
-                work folders, saved display settings, and conversation state.
+                Every feature maps to a visible app surface and a native
+                implementation area: chat, model runtime, retrieval, multimodal
+                input, web preview, and Dynamic Island pets.
               </p>
-              <dl>
-                <dt>Surface</dt>
-                <dd>Chat, settings, sessions, folders</dd>
-                <dt>Code anchors</dt>
-                <dd>src/screens, src/state, src/native/AIEngine.ts</dd>
-              </dl>
-            </article>
+            </div>
 
-            <article class="definition-card">
-              <div class="definition-index">02</div>
+            <div class="feature-visual" aria-label="Local AI feature preview">
+              <div class="runtime-card runtime-card-primary">
+                <span>LOCAL MODEL</span>
+                <strong>Native runtime</strong>
+                <small>on-device generation</small>
+              </div>
+              <div class="runtime-card runtime-card-context">
+                <span>PRIVATE CONTEXT</span>
+                <strong>Vector retrieval</strong>
+                <small>SQLite + embeddings</small>
+              </div>
+              <div class="runtime-card runtime-card-input">
+                <span>MULTIMODAL</span>
+                <strong>Files, image, text</strong>
+                <small>typed bridge path</small>
+              </div>
+
+              <div class="feature-pet-island">
+                <span
+                  class="pixel-pet pet-orbit"
+                  data-pet="orbit"
+                  role="img"
+                  aria-label="Orbit running locally"
+                ></span>
+                <div>
+                  <strong>Generating locally</strong>
+                  <span>Dynamic Island status with pet motion</span>
+                </div>
+                <span class="island-pulse" aria-hidden="true"></span>
+              </div>
+
+              <div class="feature-pet-field" aria-hidden="true">
+                <span
+                  class="pixel-pet pet-stacky pet-medium"
+                  data-pet="stacky"
+                ></span>
+                <span
+                  class="pixel-pet pet-signal pet-medium"
+                  data-pet="nullSignal"
+                ></span>
+                <span
+                  class="pixel-pet pet-luma pet-medium"
+                  data-pet="luma"
+                ></span>
+                <span
+                  class="pixel-pet pet-flux pet-medium"
+                  data-pet="flux"
+                ></span>
+              </div>
+            </div>
+          </article>
+
+          <div class="feature-stack" aria-label="Detailed feature definitions">
+            <article class="feature-stack-card">
+              <span class="definition-index">01</span>
               <h3>Native model runtime</h3>
               <p>
-                Device runtimes are handled by platform modules instead of a
-                remote-only chat API, so model loading and status stay close to
-                the user.
+                Platform modules handle model loading, runtime status, and
+                generated responses instead of making a remote chat API the
+                default path.
               </p>
               <dl>
                 <dt>Surface</dt>
@@ -243,13 +280,12 @@
               </dl>
             </article>
 
-            <article class="definition-card">
-              <div class="definition-index">03</div>
+            <article class="feature-stack-card">
+              <span class="definition-index">02</span>
               <h3>Device-side retrieval</h3>
               <p>
                 Context indexing, embeddings, vector storage, and query routing
-                are designed to work on user data without making cloud storage a
-                requirement.
+                are designed around private user data rather than cloud storage.
               </p>
               <dl>
                 <dt>Surface</dt>
@@ -259,116 +295,22 @@
               </dl>
             </article>
 
-            <article class="definition-card">
-              <div class="definition-index">04</div>
-              <h3>Multimodal inputs</h3>
+            <article class="feature-stack-card">
+              <span class="definition-index">03</span>
+              <h3>Multimodal bridge and web preview</h3>
               <p>
-                Text, files, images, and richer attachments share one typed
-                request path so the app can grow without replacing the bridge.
+                Text, files, images, and browser-based UI iteration share a
+                typed growth path without replacing the cross-platform app
+                model.
               </p>
               <dl>
                 <dt>Surface</dt>
-                <dd>Attachment-aware prompts and vision request scaffolding</dd>
+                <dd>Attachment-aware prompts and React Native Web preview</dd>
                 <dt>Code anchors</dt>
-                <dd>MultimodalRequest, VisionManager, FilePicker</dd>
+                <dd>MultimodalRequest, VisionManager, index.web.tsx</dd>
               </dl>
-            </article>
-
-            <article class="definition-card">
-              <div class="definition-index">05</div>
-              <h3>Web preview target</h3>
-              <p>
-                The Vite and React Native Web target keeps UI iteration fast
-                while preserving the cross-platform component model.
-              </p>
-              <dl>
-                <dt>Surface</dt>
-                <dd>Browser preview for frontend-only development</dd>
-                <dt>Code anchors</dt>
-                <dd>index.web.tsx, vite.config.ts, src/web</dd>
-              </dl>
-            </article>
-
-            <article class="definition-card pet-definition">
-              <div class="definition-index">06</div>
-              <h3>Dynamic Island pets</h3>
-              <p>
-                Five tiny pixel companions represent background activity in the
-                iOS island UI: Orbit, Stacky, Signal, Luma, and Flux.
-              </p>
-              <div class="pet-row" aria-label="Dynamic Island pet lineup">
-                <span
-                  class="pixel-pet pet-orbit"
-                  data-pet="orbit"
-                  role="img"
-                  aria-label="Orbit"
-                ></span>
-                <span
-                  class="pixel-pet pet-stacky"
-                  data-pet="stacky"
-                  role="img"
-                  aria-label="Stacky"
-                ></span>
-                <span
-                  class="pixel-pet pet-signal"
-                  data-pet="nullSignal"
-                  role="img"
-                  aria-label="Signal"
-                ></span>
-                <span
-                  class="pixel-pet pet-luma"
-                  data-pet="luma"
-                  role="img"
-                  aria-label="Luma"
-                ></span>
-                <span
-                  class="pixel-pet pet-flux"
-                  data-pet="flux"
-                  role="img"
-                  aria-label="Flux"
-                ></span>
-              </div>
             </article>
           </div>
-
-          <aside class="pet-showcase" aria-label="Dynamic Island pet preview">
-            <div class="pet-island">
-              <span
-                class="pixel-pet pet-orbit pet-large"
-                data-pet="orbit"
-                role="img"
-                aria-label="Orbit running"
-              ></span>
-              <div>
-                <strong>Generating locally</strong>
-                <span>Dynamic Island status with pet motion</span>
-              </div>
-              <span class="island-pulse" aria-hidden="true"></span>
-            </div>
-            <div class="pet-orbit-field" aria-hidden="true">
-              <span
-                class="pixel-pet pet-stacky pet-medium"
-                data-pet="stacky"
-              ></span>
-              <span
-                class="pixel-pet pet-signal pet-medium"
-                data-pet="nullSignal"
-              ></span>
-              <span
-                class="pixel-pet pet-luma pet-medium"
-                data-pet="luma"
-              ></span>
-              <span
-                class="pixel-pet pet-flux pet-medium"
-                data-pet="flux"
-              ></span>
-            </div>
-            <p>
-              The site uses the same 7-by-7 pixel matrices and color families as
-              the iOS feature, tuned into the dark grid visual system instead of
-              dropping in unrelated illustration.
-            </p>
-          </aside>
         </div>
       </section>
 
