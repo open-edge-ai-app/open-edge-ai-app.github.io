@@ -110,24 +110,18 @@ svg {
 
 .brand {
   display: inline-flex;
-  gap: 10px;
   align-items: center;
   width: fit-content;
-  font-size: clamp(1rem, 1.8vw, 1.35rem);
-  font-weight: 900;
   line-height: 1;
-  letter-spacing: 0;
 }
 
-.brand-mark {
-  width: 24px;
-  height: 24px;
-  flex: 0 0 24px;
-  background-image: url("./assets/open-edge-ai-wordmark.png");
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: auto 100%;
-  filter: invert(1) brightness(1.4) contrast(1.1);
+.brand-logo {
+  display: block;
+  width: clamp(154px, 15.5vw, 226px);
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .site-nav {
