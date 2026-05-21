@@ -7,7 +7,7 @@
       name="description"
       content="Open Edge AI는 프로젝트, 문서 리뷰, Todo List, 온디바이스 AI 채팅을 하나의 모바일 워크스페이스로 연결합니다."
     />
-    <meta name="theme-color" content="#3b103f" />
+    <meta name="theme-color" content="#030303" />
     <meta property="og:title" content="Open Edge AI" />
     <meta
       property="og:description"
@@ -15,7 +15,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="./assets/open-edge-ai-logo.png" />
-    <title>Open Edge AI - Mobile AI workspace</title>
+    <title>Open Edge AI - Ship AI Workflows</title>
     <link
       rel="icon"
       type="image/png"
@@ -25,226 +25,251 @@
     <link rel="stylesheet" href="./styles.css" />
     <script src="./pets.js" defer></script>
   </head>
-  <body>
-    <main class="site-shell">
-      <header class="site-header">
-        <a class="brand" href="#overview" aria-label="Open Edge AI home">
-          <img
-            class="brand-logo"
-            src="./assets/open-edge-ai-wordmark.png"
-            alt="Open Edge AI"
-          />
-        </a>
-        <nav class="site-nav" aria-label="Primary navigation">
-          <a class="active" href="#overview">Product</a>
-          <a href="#workspace">Workspace</a>
-          <a href="#documents">Documents</a>
-          <a href="./todo.html">Todo List</a>
-        </nav>
-        <a
-          class="header-action"
-          href="https://github.com/open-edge-ai-app/core-app"
-        >
-          <svg aria-hidden="true" viewBox="0 0 24 24">
-            <path
-              d="M12 .8A11.2 11.2 0 0 0 8.5 22.6c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.34-3.79-1.34-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.17 1.73 1.17 1 .1.9 2.64 3.2 1.9.1-.73.4-1.23.72-1.51-2.5-.29-5.13-1.25-5.13-5.56 0-1.23.44-2.24 1.16-3.02-.12-.29-.5-1.43.11-2.99 0 0 .95-.3 3.1 1.16A10.74 10.74 0 0 1 12 7.05c.96 0 1.92.13 2.82.38 2.14-1.45 3.09-1.16 3.09-1.16.62 1.56.24 2.7.12 2.99.72.78 1.15 1.79 1.15 3.02 0 4.32-2.63 5.27-5.14 5.55.41.36.78 1.06.78 2.14v3.09c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8Z"
-            />
-          </svg>
-          GitHub
-        </a>
-      </header>
+  <body class="home-page">
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Open Edge AI home">
+        <img
+          class="brand-logo"
+          src="./assets/open-edge-ai-brand-white.png"
+          alt="Open Edge AI"
+        />
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="active" href="./index.html#features">Features</a>
+        <a href="./index.html#product">Product</a>
+        <a href="./pricing.html">Pricing</a>
+        <a href="./todo.html">Todo List</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a
+        class="header-action"
+        href="https://github.com/open-edge-ai-app/core-app"
+      >
+        Open GitHub
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M13.5 5 20 11.5 13.5 18l-1.42-1.42 4.08-4.08H4v-2h12.16L12.08 6.42 13.5 5Z" />
+        </svg>
+      </a>
+    </header>
 
+    <main>
       <section class="hero-section" id="overview" aria-label="Product overview">
-        <div class="hero-copy">
-          <p class="section-kicker">Open Edge AI mobile demo</p>
-          <h1>
-            <span>AI 업무를</span>
-            <span>지속적인</span>
-            <span>결과로.</span>
-          </h1>
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="beta-pill">
+            <span></span>
+            Public Beta Access
+          </p>
+          <h1>Ship Workflows,<br />Not Just Prompts.</h1>
           <p>
-            프로젝트 폴더, 문서 리뷰 채팅, 할 일과 캘린더를 한 흐름으로
-            묶었습니다. 데모 화면 그대로 정보 구조와 인터랙션을 보여줍니다.
+            Open Edge AI turns project rooms, document review, Todo planning,
+            and local model chat into one mobile workspace that keeps work
+            moving from vague request to usable result.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button light" href="./todo.html">Todo List 보기</a>
-            <a
-              class="button dark"
-              href="https://github.com/open-edge-ai-app/core-app"
-              >GitHub 열기</a
-            >
+            <a class="button button-primary" href="#product">
+              Explore Product
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M13.5 5 20 11.5 13.5 18l-1.42-1.42 4.08-4.08H4v-2h12.16L12.08 6.42 13.5 5Z" />
+              </svg>
+            </a>
+            <a class="button button-secondary" href="./pricing.html">
+              View Pricing
+            </a>
           </div>
-          <dl class="proof-grid" aria-label="Product highlights">
-            <div>
-              <dt>Project rooms</dt>
-              <dd>고객 분석, 보안, 법무 문서별 작업 공간</dd>
-            </div>
-            <div>
-              <dt>Document chat</dt>
-              <dd>계약서 첨부와 리스크 요약 흐름</dd>
-            </div>
-            <div>
-              <dt>Todo List</dt>
-              <dd>리스트, 캘린더, AI 우선순위 정리</dd>
-            </div>
-          </dl>
         </div>
 
-        <div class="hero-showcase" aria-label="Open Edge AI app screenshots">
-          <figure class="phone-frame phone-dark hero-phone-main">
-            <img
-              src="./assets/demo/home-dark.png"
-              alt="Open Edge AI dark project home screen"
-            />
-          </figure>
-          <figure class="phone-frame phone-light hero-phone-side">
-            <img
-              src="./assets/demo/document-chat.png"
-              alt="NDA document review chat screen"
-            />
-          </figure>
-          <figure class="phone-frame phone-light hero-phone-small">
-            <img
-              src="./assets/demo/todo-calendar.png"
-              alt="Todo List calendar timeline screen"
-            />
-          </figure>
+        <div class="trust-rail" aria-label="Open Edge AI workflows">
+          <span>Trusted by the team</span>
+          <strong>Customer Data</strong>
+          <strong>Security</strong>
+          <strong>Legal Review</strong>
+          <strong>Todo List</strong>
+          <strong>Gemma 4</strong>
+          <strong>On-device</strong>
         </div>
 
-        <div class="stream-visual" aria-hidden="true">
-          <span class="stream-line stream-green"></span>
-          <span class="stream-line stream-orange"></span>
-          <span class="stream-line stream-magenta"></span>
-          <span class="stream-line stream-plum"></span>
-          <span class="stream-node node-one"></span>
-          <span class="stream-node node-two"></span>
-          <span class="stream-node node-three"></span>
-          <span class="stream-chip chip-one"></span>
-          <span class="stream-chip chip-two"></span>
-          <span class="stream-chip chip-three"></span>
-          <span class="pet-token pet-token-one" data-pet="orbit"></span>
-          <span class="pet-token pet-token-two" data-pet="luma"></span>
-          <span class="pet-token pet-token-three" data-pet="flux"></span>
-        </div>
+        <section class="product-preview" id="product" aria-label="Product preview">
+          <div class="preview-window">
+            <div class="window-topbar">
+              <span></span>
+              <span></span>
+              <span></span>
+              <p>open-edge-agent-workflow - main</p>
+            </div>
+            <div class="window-body">
+              <aside class="agent-sidebar" aria-label="Active agents">
+                <p>ACTIVE WORKFLOWS</p>
+                <span class="agent-online">Planner Agent</span>
+                <span class="agent-blue">Document Reviewer</span>
+                <span class="agent-orange">Todo Scheduler</span>
+                <p>PROJECT FILES</p>
+                <span>Legal Document Review</span>
+                <span>Security Compliance Center</span>
+                <span>Customer Data Analysis</span>
+              </aside>
+              <div class="code-panel" aria-label="Workflow code preview">
+                <ol>
+                  <li><code>import { Agent, Workflow } from "@open-edge/core";</code></li>
+                  <li><code></code></li>
+                  <li><code>// Generated by Planner Agent</code></li>
+                  <li><code>export const legalReview = async (request) =&gt; {</code></li>
+                  <li><code>  const nda = await Agent.attach("NDA_Agreement.pdf");</code></li>
+                  <li><code>  const risks = await Agent.analyze(nda);</code></li>
+                  <li><code>  return Workflow.createTodoPlan(risks);</code></li>
+                  <li><code>};</code></li>
+                </ol>
+              </div>
+              <div class="screen-stack" aria-label="Mobile screenshots">
+                <figure class="phone-frame dark-phone">
+                  <img
+                    src="./assets/demo/home-dark.png"
+                    alt="Open Edge AI dark project home"
+                  />
+                </figure>
+                <figure class="phone-frame light-phone">
+                  <img
+                    src="./assets/demo/document-chat.png"
+                    alt="Open Edge AI legal document chat"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
 
-      <section class="split-section" id="workspace" aria-label="Workspace demo">
-        <div class="section-copy">
-          <p class="section-kicker">Workspace</p>
-          <h2>프로젝트와 최근 작업을 앱 첫 화면에서 바로 시작합니다.</h2>
-          <p>
-            홈 화면은 프로젝트 폴더와 최근 대화의 흐름을 분리합니다. 다크/라이트
-            모드 모두 브랜드 로고와 검색, 설정, 새 채팅 액션이 같은 위치에
-            유지됩니다.
-          </p>
-          <ul class="feature-list">
-            <li>
-              Customer Data Analysis, Security Compliance Center, Legal Document
-              Review
-            </li>
-            <li>최근 문서 요약과 회의 메모를 빠르게 재진입</li>
-            <li>하단 채팅 액션으로 새 작업을 즉시 시작</li>
-          </ul>
-        </div>
-        <div class="duo-screens">
-          <figure class="phone-frame phone-dark">
-            <img
-              src="./assets/demo/home-dark.png"
-              alt="Dark mode project home screen"
-            />
-          </figure>
-          <figure class="phone-frame phone-light raised">
-            <img
-              src="./assets/demo/home-light.png"
-              alt="Light mode project home screen"
-            />
-          </figure>
-        </div>
-      </section>
-
-      <section
-        class="gallery-section"
-        id="documents"
-        aria-label="Document AI demo"
-      >
+      <section class="feature-section" id="features" aria-label="Features">
         <div class="section-heading">
-          <p class="section-kicker">Document AI</p>
-          <h2>계약서와 업무 문서를 채팅 흐름 안에서 검토합니다.</h2>
-          <p>
-            문서 프로젝트에는 대화 목록, 첨부 파일 컨텍스트, 모델 선택, 긴 응답
-            결과가 한 화면의 작업 맥락으로 이어집니다.
-          </p>
+          <p>FEATURES</p>
+          <h2>Every work surface is defined around execution.</h2>
         </div>
+        <div class="feature-grid">
+          <article class="feature-card feature-large">
+            <div>
+              <span>01</span>
+              <h3>Project Rooms</h3>
+              <p>
+                Customer analysis, security compliance, and legal review live as
+                separate rooms with recent context and fast chat entry.
+              </p>
+            </div>
+            <figure class="feature-screenshot">
+              <img
+                src="./assets/demo/home-light.png"
+                alt="Open Edge AI light project home"
+              />
+            </figure>
+            <div class="pet-dock" aria-label="Pet workflow helpers">
+              <span>
+                <i class="pet-token" data-pet="orbit"></i>
+                Planner
+              </span>
+              <span>
+                <i class="pet-token" data-pet="luma"></i>
+                Reviewer
+              </span>
+              <span>
+                <i class="pet-token" data-pet="stacky"></i>
+                Scheduler
+              </span>
+            </div>
+          </article>
+          <article class="feature-card">
+            <span>02</span>
+            <h3>Document Review</h3>
+            <p>
+              Attach contracts, compress context, and receive structured risks,
+              issues, and follow-up checks in the same conversation.
+            </p>
+          </article>
+          <article class="feature-card">
+            <span>03</span>
+            <h3>Todo Planning</h3>
+            <p>
+              Switch between list and calendar views, then ask the model to
+              reorder today’s work by urgency and sequence.
+            </p>
+          </article>
+          <article class="feature-card">
+            <span>04</span>
+            <h3>Local AI First</h3>
+            <p>
+              Gemma 4 model controls, private workspace defaults, and
+              mobile-native flows keep sensitive tasks close to the device.
+            </p>
+          </article>
+        </div>
+      </section>
 
-        <div class="document-grid">
-          <article class="demo-card">
-            <figure class="phone-frame phone-light">
+      <section class="workflow-section" aria-label="Workflow examples">
+        <div class="section-heading">
+          <p>WORKFLOW</p>
+          <h2>From document intake to scheduled work in one loop.</h2>
+        </div>
+        <div class="workflow-grid">
+          <article class="workflow-card">
+            <figure class="phone-frame light-phone">
               <img
                 src="./assets/demo/document-list.png"
-                alt="Legal Document Review chat list"
+                alt="Legal document review chat list"
               />
             </figure>
             <div>
-              <h3>프로젝트 안의 문서 대화 목록</h3>
+              <h3>Start from a project</h3>
               <p>
-                NDA 검토, 공급계약서 리스크 분석, 개인정보 조항 확인을
-                구분합니다.
+                NDA review, contract risk analysis, and privacy clause checks
+                stay grouped under the Legal Document Review room.
               </p>
             </div>
           </article>
-          <article class="demo-card wide">
-            <figure class="phone-frame phone-light">
+          <article class="workflow-card">
+            <figure class="phone-frame light-phone">
               <img
-                src="./assets/demo/document-chat.png"
-                alt="NDA document analysis chat"
+                src="./assets/demo/todo-calendar.png"
+                alt="Todo List calendar view"
               />
             </figure>
             <div>
-              <h3>첨부 기반 리스크 요약</h3>
+              <h3>Turn answers into schedule</h3>
               <p>
-                NDA 파일을 첨부하고 위험도, 문제점, 확인 필요사항을 긴 응답으로
-                정리하는 데모 화면입니다.
+                AI output can become visible blocks on the day timeline, so the
+                next action is not buried inside a chat transcript.
+              </p>
+            </div>
+          </article>
+          <article class="workflow-card">
+            <figure class="phone-frame light-phone">
+              <img
+                src="./assets/demo/todo-ai-priority.png"
+                alt="Todo priority planning chat"
+              />
+            </figure>
+            <div>
+              <h3>Ask for priority</h3>
+              <p>
+                The assistant reads the day’s tasks and proposes ordering by
+                deadlines, importance, and task dependency.
               </p>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="todo-teaser" aria-label="Todo List feature">
-        <div class="section-copy">
-          <p class="section-kicker">Todo List</p>
-          <h2>오늘의 할 일을 리스트, 캘린더, AI 우선순위로 전환합니다.</h2>
-          <p>
-            Todo List 기능은 별도 페이지에서 더 자세히 볼 수 있도록
-            분리했습니다. 오늘 일정, 캘린더 타임라인, Gemma 4 기반 우선순위 정리
-            흐름을 함께 보여줍니다.
-          </p>
-          <a class="button dark" href="./todo.html">Todo List 페이지로 이동</a>
+      <section class="cta-section" id="contact" aria-label="Contact">
+        <div>
+          <p>READY FOR THE NEXT BUILD</p>
+          <h2>Run the app, inspect the workflow, and shape the next release.</h2>
         </div>
-        <div class="todo-preview-row">
-          <figure class="phone-frame phone-light">
-            <img src="./assets/demo/todo-list.png" alt="Todo List list view" />
-          </figure>
-          <figure class="phone-frame phone-light">
-            <img
-              src="./assets/demo/todo-ai-priority.png"
-              alt="AI priority chat for todo list"
-            />
-          </figure>
+        <div class="cta-actions">
+          <a class="button button-primary" href="./pricing.html">See Pricing</a>
+          <a
+            class="button button-secondary"
+            href="https://github.com/open-edge-ai-app/core-app"
+            >Open Repository</a
+          >
         </div>
-      </section>
-
-      <section class="docs-band" id="docs" aria-label="Project documentation">
-        <a href="https://github.com/open-edge-ai-app/core-app">Repository</a>
-        <a
-          href="https://github.com/open-edge-ai-app/core-app/blob/main/docs/ARCHITECTURE.md"
-          >Architecture</a
-        >
-        <a
-          href="https://github.com/open-edge-ai-app/core-app/blob/main/docs/DEVELOPMENT.md"
-          >Development</a
-        >
-        <a href="./todo.html">Todo List</a>
       </section>
     </main>
   </body>
