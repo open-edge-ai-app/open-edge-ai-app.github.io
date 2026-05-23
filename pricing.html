@@ -26,6 +26,10 @@
     <script src="./pets.js" defer></script>
   </head>
   <body class="pricing-page">
+    <div class="announcement-bar" role="status">
+      Open-source first pricing: free local use, optional hosted credits, paid team support.
+      <span aria-hidden="true">×</span>
+    </div>
     <header class="site-header">
       <a class="brand" href="./index.html" aria-label="Open Edge AI home">
         <img
@@ -57,85 +61,181 @@
         <div class="hero-grid" aria-hidden="true"></div>
         <div class="pricing-intro">
           <h1>Pricing</h1>
-          <p>Start small and scale as your workflows grow.</p>
-          <div class="billing-toggle" aria-label="Billing cycle">
-            <span>MONTHLY</span>
-            <strong>YEARLY -20%</strong>
+          <p>
+            Start with the open-source app. Pay only for managed credits,
+            collaboration controls, and commercial support as your workflow grows.
+          </p>
+        </div>
+
+        <section class="pricing-group" aria-label="Individual plans">
+          <div class="pricing-group-head">
+            <h2>For Individuals</h2>
+            <a href="https://github.com/open-edge-ai-app/core-app">Open source repo</a>
           </div>
-        </div>
+          <div class="pricing-grid four-up">
+            <article class="price-card">
+              <h2>COMMUNITY EDITION</h2>
+              <p>For local use, self-hosting, and open-source evaluation.</p>
+              <div class="price">
+                <span>$0</span>
+                <small>/month</small>
+              </div>
+              <hr />
+              <p>Includes</p>
+              <ul>
+                <li>Core mobile workspace</li>
+                <li>Self-host and local data</li>
+                <li>Bring your own model key</li>
+                <li>Community support</li>
+              </ul>
+              <a class="price-button" href="https://github.com/open-edge-ai-app/core-app">
+                Open GitHub
+              </a>
+            </article>
 
-        <div class="pricing-grid">
-          <article class="price-card">
-            <h2>DEVELOPER</h2>
-            <p>For individual builders and simple automation.</p>
-            <div class="price">
-              <span>$40</span>
-              <small>/user per month</small>
-            </div>
-            <hr />
-            <p>All core benefits in one unified platform</p>
-            <ul>
-              <li>$600 in yearly credits</li>
-              <li>Basic document review</li>
-              <li>1 project workspace</li>
-              <li>Todo List and calendar</li>
-              <li>Community support</li>
-            </ul>
-            <a class="price-button" href="https://github.com/open-edge-ai-app/core-app">
-              Choose Developer
-            </a>
-          </article>
+            <article class="price-card popular">
+              <div class="popular-label">POPULAR</div>
+              <h2>PRO</h2>
+              <p>For solo builders who want hosted AI credits.</p>
+              <div class="price">
+                <span>$20</span>
+                <small>/month</small>
+              </div>
+              <hr />
+              <p>Everything in Community, plus</p>
+              <ul>
+                <li>2,000 hosted credits</li>
+                <li>Document review workflows</li>
+                <li>Todo List AI planning</li>
+                <li>Usage alerts and caps</li>
+              </ul>
+              <a class="price-button filled" href="https://github.com/open-edge-ai-app/core-app">
+                Join Beta
+              </a>
+            </article>
 
-          <article class="price-card popular">
-            <div class="popular-label">POPULAR</div>
-            <h2>BUSINESS</h2>
-            <p>For small teams and medium-volume needs.</p>
-            <div class="price">
-              <span>$200</span>
-              <small>/user per month</small>
-            </div>
-            <hr />
-            <p>All core benefits in one unified platform</p>
-            <ul>
-              <li>Everything from Developer</li>
-              <li>$6000 in yearly credits</li>
-              <li>Up to 100 active workflows</li>
-              <li>Up to 5 team members</li>
-              <li>Advanced private workspace</li>
-            </ul>
-            <a class="price-button filled" href="https://github.com/open-edge-ai-app/core-app">
-              Choose Business
-            </a>
-          </article>
+            <article class="price-card">
+              <h2>PRO+</h2>
+              <p>For heavy document, project, and schedule automation.</p>
+              <div class="price">
+                <span>$60</span>
+                <small>/month</small>
+              </div>
+              <hr />
+              <p>Everything in Pro, plus</p>
+              <ul>
+                <li>6,000 hosted credits</li>
+                <li>Priority model routing</li>
+                <li>Long-running task support</li>
+                <li>Advanced project memory</li>
+              </ul>
+              <a class="price-button" href="https://github.com/open-edge-ai-app/core-app">
+                Choose Pro+
+              </a>
+            </article>
 
-          <article class="price-card">
-            <h2>SCALEUP</h2>
-            <p>For organizations requiring security and control.</p>
-            <div class="price">
-              <span>$1900</span>
-              <small>/user per month</small>
-            </div>
-            <hr />
-            <p>All core benefits in one unified platform</p>
-            <ul>
-              <li>Everything from Business</li>
-              <li>$30000 in yearly credits</li>
-              <li>Up to 250 concurrent workflows</li>
-              <li>Unlimited team members</li>
-              <li>Dedicated onboarding engineer</li>
-            </ul>
-            <a class="price-button" href="https://github.com/open-edge-ai-app/core-app">
-              Choose Scaleup
-            </a>
-          </article>
-        </div>
-        <div class="pricing-inclusions" aria-label="Included in every plan">
-          <span>Included in every plan</span>
-          <strong>Private project rooms</strong>
-          <strong>Document review chat</strong>
-          <strong>Todo List workflow</strong>
-          <strong>Model controls</strong>
-        </div>
+            <article class="price-card">
+              <h2>ULTRA</h2>
+              <p>For power users running frequent multi-step workflows.</p>
+              <div class="price">
+                <span>$200</span>
+                <small>/month</small>
+              </div>
+              <hr />
+              <p>Everything in Pro+, plus</p>
+              <ul>
+                <li>20,000 hosted credits</li>
+                <li>Highest monthly quota</li>
+                <li>Priority beta features</li>
+                <li>Workflow usage review</li>
+              </ul>
+              <a class="price-button" href="https://github.com/open-edge-ai-app/core-app">
+                Choose Ultra
+              </a>
+            </article>
+          </div>
+          <p class="pricing-note">
+            Hosted AI usage is measured in credits. Community Edition can stay
+            free when you use local models or your own model provider key.
+          </p>
+        </section>
+
+        <section class="pricing-group teams" aria-label="Team plans">
+          <div class="pricing-group-head">
+            <h2>For Teams</h2>
+            <a href="https://github.com/open-edge-ai-app/core-app">Contact Sales</a>
+          </div>
+          <div class="pricing-grid two-up">
+            <article class="price-card">
+              <h2>TEAMS</h2>
+              <p>For shared project rooms, roles, and operational workflows.</p>
+              <div class="price">
+                <span>$40</span>
+                <small>/seat-month</small>
+              </div>
+              <hr />
+              <p>Everything in Pro, plus</p>
+              <ul>
+                <li>Shared project workspaces</li>
+                <li>Team usage pool</li>
+                <li>Workspace roles</li>
+                <li>Email support</li>
+              </ul>
+              <a class="price-button filled" href="https://github.com/open-edge-ai-app/core-app">
+                Contact Sales
+              </a>
+            </article>
+
+            <article class="price-card">
+              <h2>ENTERPRISE</h2>
+              <p>For regulated teams that need deployment control.</p>
+              <div class="price">
+                <span>TBD</span>
+                <small>custom</small>
+              </div>
+              <hr />
+              <p>Everything in Teams, plus</p>
+              <ul>
+                <li>Private deployment guidance</li>
+                <li>SSO and audit controls</li>
+                <li>Custom support SLA</li>
+                <li>Security review package</li>
+              </ul>
+              <a class="price-button" href="https://github.com/open-edge-ai-app/core-app">
+                Request Quote
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <section class="sales-policy" aria-label="Open-source sales policy">
+          <div class="pricing-group-head">
+            <h2>Open-source sales policy</h2>
+            <span>Simple rules before checkout</span>
+          </div>
+          <div class="policy-grid">
+            <article>
+              <span>01</span>
+              <strong>Community stays free</strong>
+              <p>Core app access, local projects, and BYOK usage remain available without a subscription.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <strong>Hosted credits are metered</strong>
+              <p>Managed model usage uses monthly credits with clear usage alerts before quota is exhausted.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <strong>Teams pay by active seats</strong>
+              <p>Collaboration, roles, shared pools, and support are billed for active team users.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <strong>Enterprise is support-led</strong>
+              <p>Security, SSO, deployment review, procurement, and SLA requirements go through sales.</p>
+            </article>
+          </div>
+        </section>
       </section>
     </main>
   </body>
