@@ -1,0 +1,5 @@
+Contact: https://github.com/open-edge-ai-app/core-app/security
+Policy: https://open-edge-ai-app.github.io/support.html
+Preferred-Languages: en, ko
+Canonical: https://open-edge-ai-app.github.io/.well-known/security.txt
+Expires: 2027-07-12T00:00:00Z

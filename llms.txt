@@ -1,0 +1,22 @@
+# Open Edge AI
+
+Open Edge AI is an MIT-licensed, local-first mobile AI project.
+
+Project website: https://open-edge-ai-app.github.io/
+Source repository: https://github.com/open-edge-ai-app/core-app
+Documentation: https://open-edge-ai-app.github.io/docs/
+
+## Documentation
+
+- Getting started: https://open-edge-ai-app.github.io/docs/getting-started.html
+- Architecture: https://open-edge-ai-app.github.io/docs/architecture.html
+- Local models: https://open-edge-ai-app.github.io/docs/local-models.html
+- Native bridge: https://open-edge-ai-app.github.io/docs/native-bridge.html
+- Development: https://open-edge-ai-app.github.io/docs/development.html
+- Community: https://open-edge-ai-app.github.io/community.html
+- Releases: https://open-edge-ai-app.github.io/releases.html
+- Support and security: https://open-edge-ai-app.github.io/support.html
+
+The Android app uses React Native with Kotlin native AI modules. The iOS app is
+a native SwiftUI target. Model execution, retrieval, and private context are
+kept on device wherever practical. Public APIs may change before a stable release.

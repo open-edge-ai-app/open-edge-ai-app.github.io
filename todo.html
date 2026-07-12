@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,13 +8,18 @@
       content="Open Edge AI Todo List는 오늘의 할 일을 리스트, 캘린더, AI 우선순위 정리 화면으로 보여줍니다."
     />
     <meta name="theme-color" content="#030303" />
+    <meta name="robots" content="index, follow" />
     <meta property="og:title" content="Open Edge AI Todo List" />
     <meta
       property="og:description"
       content="List, calendar, and AI prioritization for daily work in Open Edge AI."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="./assets/demo/todo-list.png" />
+    <meta property="og:url" content="https://open-edge-ai-app.github.io/todo.html" />
+    <meta property="og:image" content="https://open-edge-ai-app.github.io/assets/demo/todo-list.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://open-edge-ai-app.github.io/todo.html" />
+    <link rel="manifest" href="./site.webmanifest" />
     <title>Open Edge AI - Todo List</title>
     <link
       rel="icon"
@@ -24,11 +29,12 @@
     <link rel="apple-touch-icon" href="./assets/open-edge-ai-icon-white.png" />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./pets.js" defer></script>
+    <script src="./site.js" defer></script>
   </head>
   <body class="todo-page">
     <div class="announcement-bar" role="status">
       Open-source beta: Todo workflows work locally, hosted credits are optional.
-      <span aria-hidden="true">×</span>
+      <button type="button" aria-label="Dismiss announcement">×</button>
     </div>
     <header class="site-header">
       <a class="brand" href="./index.html" aria-label="Open Edge AI home">
@@ -39,11 +45,11 @@
         />
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="./index.html#product">Product</a>
-        <a href="./index.html#components">Components</a>
+        <a class="active" href="./features.html">Product</a>
+        <a href="./docs/">Docs</a>
+        <a href="./community.html">Community</a>
+        <a href="./releases.html">Releases</a>
         <a href="./pricing.html">Pricing</a>
-        <a class="active" href="./todo.html">Todo List</a>
-        <a href="./index.html#contact">Contact</a>
       </nav>
       <a
         class="header-action"
@@ -148,5 +154,18 @@
         </div>
       </section>
     </main>
+    <footer class="site-footer">
+      <a class="footer-brand" href="./index.html">
+        <img src="./assets/open-edge-ai-brand-white.png" alt="Open Edge AI" />
+        <span>Todo planning is one Open Edge AI workflow surface.</span>
+      </a>
+      <div class="footer-links">
+        <a href="./features.html">Product</a>
+        <a href="./docs/">Documentation</a>
+        <a href="./community.html">Community</a>
+        <a href="./support.html">Support & Security</a>
+        <a href="https://github.com/open-edge-ai-app/core-app">GitHub</a>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Understand the Open Edge AI architecture across React Native Android, native SwiftUI iOS, web preview, storage, model lifecycle, and privacy boundaries." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#030303" />
+    <meta property="og:title" content="Open Edge AI Architecture" />
+    <meta property="og:description" content="Platform layers, native AI bridge, data storage, and local-first privacy model." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://open-edge-ai-app.github.io/docs/architecture.html" />
+    <meta property="og:image" content="https://open-edge-ai-app.github.io/assets/open-edge-ai-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://open-edge-ai-app.github.io/docs/architecture.html" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" href="/assets/open-edge-ai-icon-white.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/site.js" defer></script>
+    <title>Architecture - Open Edge AI Docs</title>
+  </head>
+  <body>
+    <div class="announcement-bar" role="status">Shared product intent, platform-native runtime ownership.<button type="button" aria-label="Dismiss announcement">×</button></div>
+    <header class="site-header"><a class="brand" href="/" aria-label="Open Edge AI home"><img class="brand-logo" src="/assets/open-edge-ai-brand-white.png" alt="Open Edge AI" /></a><nav class="site-nav" aria-label="Primary navigation"><a href="/features.html">Product</a><a class="active" href="/docs/">Docs</a><a href="/community.html">Community</a><a href="/releases.html">Releases</a><a href="/pricing.html">Pricing</a></nav><a class="header-action" href="https://github.com/open-edge-ai-app/core-app">Open GitHub<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M13.5 5 20 11.5 13.5 18l-1.42-1.42 4.08-4.08H4v-2h12.16L12.08 6.42 13.5 5Z" /></svg></a></header>
+    <main class="docs-main"><div class="docs-shell">
+      <aside class="docs-sidebar" aria-label="Documentation navigation"><p>Start</p><a href="./">Overview</a><a href="./getting-started.html">Getting started</a><p>Understand</p><a class="active" href="./architecture.html">Architecture</a><a href="./local-models.html">Local models</a><a href="./native-bridge.html">Native bridge</a><p>Build</p><a href="./development.html">Development</a><a href="/community.html">Contributing</a></aside>
+      <article class="docs-article">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Docs</a><span>/</span><span>Architecture</span></nav>
+        <h1>Architecture</h1>
+        <p class="doc-lead">Open Edge AI uses a React Native shell on Android, a separate native SwiftUI app on iOS, and native model execution modules on each platform.</p>
+        <h2>High-level flow</h2>
+        <pre class="code-block">Android React Native screens
+  → src/native/AIEngine.ts
+  → NativeModules.AIEngine
+  → Kotlin bridge
+  → QueryRouter
+  → Model runtime / embeddings / vector DB / workers
+
+iOS SwiftUI views
+  → Foundation Model or Gemma client
+  → Apple Foundation Models / LiteRT-LM runtime</pre>
+        <h2>React Native app</h2>
+        <p>The root application coordinates active screens, selected models, chat persistence, work folders, navigation, and display personalization. Reusable UI lives under <code>src/components</code>, screens under <code>src/screens</code>, and shared visual tokens under <code>src/theme</code>.</p>
+        <h2>Android native core</h2>
+        <table class="docs-table"><thead><tr><th>Area</th><th>Responsibility</th></tr></thead><tbody><tr><td><code>bridge/</code></td><td>Registers and exposes React Native methods.</td></tr><tr><td><code>core/</code></td><td>Routing, model lifecycle, runtime status, embeddings, vision, and multimodal requests.</td></tr><tr><td><code>db/</code></td><td>Vector persistence and similarity lookup helpers.</td></tr><tr><td><code>workers/</code></td><td>Background indexing jobs and long-running device work.</td></tr></tbody></table>
+        <h2>Native iOS core</h2>
+        <p>The iOS target is a native SwiftUI app. It owns Apple Foundation Models integration, Gemma/LiteRT-LM runtime work, model state, and iOS-specific interaction behavior without depending on the React Native CLI.</p>
+        <h2>Web preview</h2>
+        <p>Vite and React Native Web provide a browser target for fast interface iteration. Native model features return development fallbacks in this environment.</p>
+        <h2>Storage</h2>
+        <p>React Native state uses AsyncStorage for sessions, messages, drafts, folders, selected models, and display settings. Android retrieval uses local SQLite helpers for indexing and vector lookup.</p>
+        <h2>Privacy boundary</h2>
+        <p>Chat context, embeddings, indexing, and model execution should remain on device whenever possible. Any network feature must document what leaves the device, why it is required, whether it is optional, and how retention and deletion work.</p>
+        <div class="doc-callout">Local-first is an architectural constraint, not a promise that every future feature is automatically offline. Network behavior must remain explicit and optional where practical.</div>
+      </article>
+    </div></main>
+    <footer class="site-footer"><a class="footer-brand" href="/"><img src="/assets/open-edge-ai-brand-white.png" alt="Open Edge AI" /><span>Architecture follows platform ownership and local-first privacy boundaries.</span></a><div class="footer-links"><a href="./getting-started.html">Getting Started</a><a href="./local-models.html">Local Models</a><a href="./native-bridge.html">Native Bridge</a><a href="/support.html">Support</a><a href="https://github.com/open-edge-ai-app/core-app">GitHub</a></div></footer>
+  </body>
+</html>

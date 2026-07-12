@@ -1,0 +1,16 @@
+{
+  "name": "Open Edge AI",
+  "short_name": "Open Edge AI",
+  "description": "Open-source, local-first mobile AI workspace.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030303",
+  "theme_color": "#030303",
+  "icons": [
+    {
+      "src": "/assets/open-edge-ai-icon-white.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

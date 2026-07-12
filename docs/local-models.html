@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Open Edge AI local model guide covering model assets, device lifecycle, Gemma and Apple runtime paths, privacy, and repository policy." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#030303" />
+    <meta property="og:title" content="Local Models - Open Edge AI" />
+    <meta property="og:description" content="Model assets, lifecycle, compatibility, and private on-device execution." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://open-edge-ai-app.github.io/docs/local-models.html" />
+    <meta property="og:image" content="https://open-edge-ai-app.github.io/assets/open-edge-ai-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://open-edge-ai-app.github.io/docs/local-models.html" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" href="/assets/open-edge-ai-icon-white.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/site.js" defer></script>
+    <title>Local Models - Open Edge AI Docs</title>
+  </head>
+  <body>
+    <div class="announcement-bar" role="status">Large model binaries are downloaded locally and are not committed to Git.<button type="button" aria-label="Dismiss announcement">×</button></div>
+    <header class="site-header"><a class="brand" href="/" aria-label="Open Edge AI home"><img class="brand-logo" src="/assets/open-edge-ai-brand-white.png" alt="Open Edge AI" /></a><nav class="site-nav" aria-label="Primary navigation"><a href="/features.html">Product</a><a class="active" href="/docs/">Docs</a><a href="/community.html">Community</a><a href="/releases.html">Releases</a><a href="/pricing.html">Pricing</a></nav><a class="header-action" href="https://github.com/open-edge-ai-app/core-app">Open GitHub<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M13.5 5 20 11.5 13.5 18l-1.42-1.42 4.08-4.08H4v-2h12.16L12.08 6.42 13.5 5Z" /></svg></a></header>
+    <main class="docs-main"><div class="docs-shell">
+      <aside class="docs-sidebar" aria-label="Documentation navigation"><p>Start</p><a href="./">Overview</a><a href="./getting-started.html">Getting started</a><p>Understand</p><a href="./architecture.html">Architecture</a><a class="active" href="./local-models.html">Local models</a><a href="./native-bridge.html">Native bridge</a><p>Build</p><a href="./development.html">Development</a><a href="/community.html">Contributing</a></aside>
+      <article class="docs-article">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Docs</a><span>/</span><span>Local models</span></nav>
+        <h1>Local models</h1>
+        <p class="doc-lead">Open Edge AI keeps model lifecycle and private context close to the device. The repository tracks runtime code and placeholders, not large model binaries.</p>
+        <h2>Asset policy</h2>
+        <p>Model binaries are intentionally excluded from Git because of size, licensing, redistribution, and device compatibility constraints. Real model files should be downloaded on device or stored outside the repository.</p>
+        <pre class="code-block">android/app/src/main/assets/models/
+└── gemma-4-E2B-it.litertlm</pre>
+        <div class="doc-callout">A placeholder file may exist for development packaging, but generation requires a compatible runtime asset.</div>
+        <h2>Lifecycle</h2>
+        <ol><li>Inspect startup state.</li><li>Check model availability and runtime compatibility.</li><li>Download or locate the model file.</li><li>Load the runtime when generation is requested.</li><li>Route compatible requests to the loaded runtime.</li><li>Cancel or unload when work ends or the host is invalidated.</li></ol>
+        <h2>Platform paths</h2>
+        <table class="docs-table"><thead><tr><th>Platform</th><th>Current direction</th></tr></thead><tbody><tr><td>Android</td><td>Kotlin runtime modules expose status, download, loading, routing, embeddings, retrieval, and background indexing.</td></tr><tr><td>iOS</td><td>Native Swift clients target Apple Foundation Models and compatible Gemma/LiteRT-LM execution.</td></tr><tr><td>Web</td><td>Development fallback only; browser preview does not load native mobile runtimes.</td></tr></tbody></table>
+        <h2>Privacy</h2>
+        <p>On-device generation can reduce server dependency, but privacy still depends on the selected runtime, model provider, attachment source, and optional network features. Users should be able to distinguish local execution from provider-backed execution.</p>
+        <h2>Compatibility and performance</h2>
+        <p>Model compatibility depends on format, runtime version, device memory, operating system support, and accelerator availability. A model file that exists on disk is not necessarily loadable on every device.</p>
+        <h2>Repository rules</h2>
+        <ul><li>Do not commit model binaries or generated download output.</li><li>Document the expected format, source, checksum strategy, and license.</li><li>Handle download failure, cancellation, storage pressure, and incompatible runtime errors.</li><li>Never imply that a remote provider is local execution.</li></ul>
+      </article>
+    </div></main>
+    <footer class="site-footer"><a class="footer-brand" href="/"><img src="/assets/open-edge-ai-brand-white.png" alt="Open Edge AI" /><span>Model assets stay local and outside Git; runtime behavior stays explicit.</span></a><div class="footer-links"><a href="./architecture.html">Architecture</a><a href="./native-bridge.html">Native Bridge</a><a href="./development.html">Development</a><a href="/support.html">Support</a><a href="https://github.com/open-edge-ai-app/core-app">GitHub</a></div></footer>
+  </body>
+</html>

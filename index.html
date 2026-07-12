@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Open Edge AI는 프로젝트, 문서 리뷰, Todo List, 온디바이스 AI 채팅을 하나의 모바일 워크스페이스로 연결합니다."
+      content="Open Edge AI is an open-source, local-first mobile AI workspace for private chat, work folders, on-device models, retrieval, and multimodal input."
     />
+    <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#030303" />
-    <meta property="og:title" content="Open Edge AI" />
+    <meta property="og:title" content="Open Edge AI - Local-first mobile AI" />
     <meta
       property="og:description"
-      content="Projects, documents, Todo List, and local AI chat in one mobile workspace."
+      content="Open-source mobile AI with private context, local model runtimes, retrieval, and native Android and iOS experiences."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="./assets/open-edge-ai-logo.png" />
-    <title>Open Edge AI - Ship AI Workflows</title>
+    <meta property="og:url" content="https://open-edge-ai-app.github.io/" />
+    <meta property="og:image" content="https://open-edge-ai-app.github.io/assets/open-edge-ai-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Open Edge AI - Local-first mobile AI" />
+    <meta name="twitter:description" content="Open-source mobile AI with private context and on-device model runtimes." />
+    <meta name="twitter:image" content="https://open-edge-ai-app.github.io/assets/open-edge-ai-logo.png" />
+    <link rel="canonical" href="https://open-edge-ai-app.github.io/" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <title>Open Edge AI - Local-first mobile AI</title>
     <link
       rel="icon"
       type="image/png"
@@ -24,11 +32,35 @@
     <link rel="apple-touch-icon" href="./assets/open-edge-ai-icon-white.png" />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./pets.js" defer></script>
+    <script src="./site.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "Open Edge AI",
+            "url": "https://open-edge-ai-app.github.io/",
+            "description": "Open-source, local-first mobile AI workspace."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Open Edge AI",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Android, iOS, Web",
+            "isAccessibleForFree": true,
+            "license": "https://opensource.org/license/mit",
+            "codeRepository": "https://github.com/open-edge-ai-app/core-app",
+            "url": "https://open-edge-ai-app.github.io/"
+          }
+        ]
+      }
+    </script>
   </head>
   <body class="home-page">
     <div class="announcement-bar" role="status">
       Open-source beta: self-host the core app, add hosted credits only when you need them.
-      <span aria-hidden="true">×</span>
+      <button type="button" aria-label="Dismiss announcement">×</button>
     </div>
     <header class="site-header">
       <a class="brand" href="./index.html" aria-label="Open Edge AI home">
@@ -39,11 +71,11 @@
         />
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
-        <a class="active" href="./index.html#product">Product</a>
-        <a href="./index.html#components">Components</a>
+        <a class="active" href="./features.html">Product</a>
+        <a href="./docs/">Docs</a>
+        <a href="./community.html">Community</a>
+        <a href="./releases.html">Releases</a>
         <a href="./pricing.html">Pricing</a>
-        <a href="./todo.html">Todo List</a>
-        <a href="#contact">Contact</a>
       </nav>
       <a
         class="header-action"
@@ -81,8 +113,8 @@
                 <path d="M13.5 5 20 11.5 13.5 18l-1.42-1.42 4.08-4.08H4v-2h12.16L12.08 6.42 13.5 5Z" />
               </svg>
             </a>
-            <a class="button button-secondary" href="./pricing.html">
-              View Pricing
+            <a class="button button-secondary" href="./docs/">
+              Read Docs
             </a>
           </div>
         </div>
@@ -408,5 +440,18 @@
         </div>
       </section>
     </main>
+    <footer class="site-footer">
+      <a class="footer-brand" href="./index.html">
+        <img src="./assets/open-edge-ai-brand-white.png" alt="Open Edge AI" />
+        <span>Local-first mobile AI, released under the MIT License.</span>
+      </a>
+      <div class="footer-links">
+        <a href="./docs/">Documentation</a>
+        <a href="./community.html">Community</a>
+        <a href="./releases.html">Releases</a>
+        <a href="./support.html">Support & Security</a>
+        <a href="https://github.com/open-edge-ai-app/core-app">GitHub</a>
+      </div>
+    </footer>
   </body>
 </html>

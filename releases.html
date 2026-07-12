@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Open Edge AI release notes, development status, installable artifacts, and changelog for the open-source mobile AI project." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#030303" />
+    <meta property="og:title" content="Open Edge AI Releases" />
+    <meta property="og:description" content="Track Open Edge AI releases and current development work." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://open-edge-ai-app.github.io/releases.html" />
+    <meta property="og:image" content="https://open-edge-ai-app.github.io/assets/open-edge-ai-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://open-edge-ai-app.github.io/releases.html" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="icon" type="image/png" href="./assets/open-edge-ai-icon-white.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./site.js" defer></script>
+    <title>Releases - Open Edge AI</title>
+  </head>
+  <body>
+    <div class="announcement-bar" role="status">The project is under active development; public APIs may change before a stable release.<button type="button" aria-label="Dismiss announcement">×</button></div>
+    <header class="site-header"><a class="brand" href="./index.html" aria-label="Open Edge AI home"><img class="brand-logo" src="./assets/open-edge-ai-brand-white.png" alt="Open Edge AI" /></a><nav class="site-nav" aria-label="Primary navigation"><a href="./features.html">Product</a><a href="./docs/">Docs</a><a href="./community.html">Community</a><a class="active" href="./releases.html">Releases</a><a href="./pricing.html">Pricing</a></nav><a class="header-action" href="https://github.com/open-edge-ai-app/core-app/releases">GitHub Releases<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M13.5 5 20 11.5 13.5 18l-1.42-1.42 4.08-4.08H4v-2h12.16L12.08 6.42 13.5 5Z" /></svg></a></header>
+    <main class="content-page">
+      <section class="page-hero"><div><p class="page-kicker">Releases</p><h1>Progress, documented.</h1><p>Follow the current development stream, public version history, and the paths used to produce Android and iOS simulator artifacts.</p></div></section>
+      <section class="content-band">
+        <div class="release-list">
+          <article class="release-entry"><div class="release-meta">UNRELEASED<br />ACTIVE DEVELOPMENT</div><div class="release-copy"><h2>Next development release</h2><h3>Added</h3><ul><li>Native SwiftUI experience and local model runtime work for iOS.</li><li>React Native chat shell with persistent sessions and work folders.</li><li>Android native bridge, runtime status, model lifecycle hooks, retrieval, and background indexing.</li><li>Web preview target and expanded open-source documentation.</li></ul><h3>Changed</h3><ul><li>Refined chat, menu, model selector, Todo, project, and folder workflows.</li><li>Improved installable artifact tooling and release preparation.</li></ul></div></article>
+          <article class="release-entry"><div class="release-meta">0.0.1<br />2026-05-12</div><div class="release-copy"><h2>Initial public development version</h2><p class="doc-lead">The first public project snapshot established the cross-platform UI, repository structure, documentation, and open-source release foundation.</p><h3>Included</h3><ul><li>Initial React Native mobile shell and browser preview.</li><li>Android and iOS project foundations.</li><li>MIT License, project policies, CI, issue templates, and contribution guidance.</li></ul></div></article>
+        </div>
+      </section>
+      <section class="content-band alt"><div class="band-header"><div><p class="eyebrow">Installable artifacts</p><h2>Development builds are platform-specific.</h2></div><p>Android debug APKs and iOS simulator app archives can be generated locally. Signed iPhone distribution requires Apple signing credentials.</p></div><div class="platform-list"><div class="platform-row"><strong>Android APK</strong><p>Build debug APK files into <code>dist/installers/</code> and install them with Android platform tools.</p><a href="./docs/getting-started.html">Build guide</a></div><div class="platform-row"><strong>iOS simulator</strong><p>Build and archive the simulator app, then install it into a booted simulator with <code>simctl</code>.</p><a href="./docs/development.html">Development</a></div><div class="platform-row"><strong>Source releases</strong><p>Git tags and GitHub releases remain the authoritative source history for public versions.</p><a href="https://github.com/open-edge-ai-app/core-app/releases">Open GitHub</a></div></div></section>
+    </main>
+    <footer class="site-footer"><a class="footer-brand" href="./index.html"><img src="./assets/open-edge-ai-brand-white.png" alt="Open Edge AI" /><span>Release notes follow the repository changelog and Git history.</span></a><div class="footer-links"><a href="./docs/">Documentation</a><a href="./community.html">Community</a><a href="./support.html">Support & Security</a><a href="https://github.com/open-edge-ai-app/core-app/blob/main/CHANGELOG.md">Changelog</a><a href="https://github.com/open-edge-ai-app/core-app/releases">GitHub Releases</a></div></footer>
+  </body>
+</html>

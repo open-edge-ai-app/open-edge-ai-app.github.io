@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Install and run Open Edge AI on Android, native iOS, or the browser preview, including requirements and installer artifacts." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#030303" />
+    <meta property="og:title" content="Getting Started with Open Edge AI" />
+    <meta property="og:description" content="Requirements, installation, platform run commands, and development artifacts." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://open-edge-ai-app.github.io/docs/getting-started.html" />
+    <meta property="og:image" content="https://open-edge-ai-app.github.io/assets/demo/home-dark.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://open-edge-ai-app.github.io/docs/getting-started.html" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" href="/assets/open-edge-ai-icon-white.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/site.js" defer></script>
+    <title>Getting Started - Open Edge AI Docs</title>
+  </head>
+  <body>
+    <div class="announcement-bar" role="status">The browser preview is fastest for UI work; native AI requires a platform build.<button type="button" aria-label="Dismiss announcement">×</button></div>
+    <header class="site-header"><a class="brand" href="/" aria-label="Open Edge AI home"><img class="brand-logo" src="/assets/open-edge-ai-brand-white.png" alt="Open Edge AI" /></a><nav class="site-nav" aria-label="Primary navigation"><a href="/features.html">Product</a><a class="active" href="/docs/">Docs</a><a href="/community.html">Community</a><a href="/releases.html">Releases</a><a href="/pricing.html">Pricing</a></nav><a class="header-action" href="https://github.com/open-edge-ai-app/core-app">Open GitHub<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M13.5 5 20 11.5 13.5 18l-1.42-1.42 4.08-4.08H4v-2h12.16L12.08 6.42 13.5 5Z" /></svg></a></header>
+    <main class="docs-main">
+      <div class="docs-shell">
+        <aside class="docs-sidebar" aria-label="Documentation navigation"><p>Start</p><a href="./">Overview</a><a class="active" href="./getting-started.html">Getting started</a><p>Understand</p><a href="./architecture.html">Architecture</a><a href="./local-models.html">Local models</a><a href="./native-bridge.html">Native bridge</a><p>Build</p><a href="./development.html">Development</a><a href="/community.html">Contributing</a></aside>
+        <article class="docs-article">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Docs</a><span>/</span><span>Getting started</span></nav>
+          <h1>Getting started</h1>
+          <p class="doc-lead">Choose the fastest target for your work: browser preview for interface iteration, Android for the React Native native bridge, or native iOS for SwiftUI and local Apple/Gemma runtimes.</p>
+          <h2>Requirements</h2>
+          <table class="docs-table"><thead><tr><th>Tool</th><th>Requirement</th></tr></thead><tbody><tr><td>Node.js</td><td><code>&gt;= 22.11.0</code> with npm</td></tr><tr><td>Android</td><td>OpenJDK 17, Android Studio, Android SDK, and a device or emulator</td></tr><tr><td>iOS</td><td>macOS, full Xcode, CocoaPods, and a compatible simulator or device</td></tr><tr><td>Native model testing</td><td>iOS 26.2 or newer for current Apple Foundation Models and Gemma runtime work</td></tr></tbody></table>
+          <h2>Install</h2>
+          <pre class="code-block">git clone https://github.com/open-edge-ai-app/core-app.git
+cd core-app
+npm install</pre>
+          <h2>Run the browser preview</h2>
+          <pre class="code-block">npm run web</pre>
+          <p>The Vite web target is designed for rapid UI development. Native AI calls use safe development fallbacks because browser code cannot load the Android or iOS runtimes.</p>
+          <h2>Run Android</h2>
+          <pre class="code-block">npm run start:android
+npm run android</pre>
+          <p>The Android workflow uses Metro port <code>8082</code>, applies the matching <code>adb reverse</code>, installs the debug build, and starts the app activity.</p>
+          <div class="doc-callout">If another process owns port 8081, keep using the repository's 8082 scripts. They exist specifically to avoid loading the wrong bundle.</div>
+          <h2>Run native iOS</h2>
+          <pre class="code-block">npm run ios:pods
+npm run ios</pre>
+          <p>The iOS app boots from a native SwiftUI shell and does not require Metro. The helper installs Pods when needed, builds the workspace, installs the app, and launches it on a simulator.</p>
+          <h2>Build installable development artifacts</h2>
+          <pre class="code-block">npm run build:installers
+
+# Platform-specific alternatives
+npm run build:android:apk
+npm run build:ios:simulator</pre>
+          <p>Generated files are written under <code>dist/installers/</code> and are intentionally ignored by Git. Signed iPhone distribution requires Apple signing credentials and a proper archive export.</p>
+          <h2>Run quality checks</h2>
+          <pre class="code-block">npm run lint
+npx tsc --noEmit
+npm test -- --runInBand</pre>
+        </article>
+      </div>
+    </main>
+    <footer class="site-footer"><a class="footer-brand" href="/"><img src="/assets/open-edge-ai-brand-white.png" alt="Open Edge AI" /><span>Next: understand the platform architecture and native ownership boundaries.</span></a><div class="footer-links"><a href="./architecture.html">Architecture</a><a href="./local-models.html">Local Models</a><a href="./development.html">Development</a><a href="/support.html">Support</a><a href="https://github.com/open-edge-ai-app/core-app">GitHub</a></div></footer>
+  </body>
+</html>

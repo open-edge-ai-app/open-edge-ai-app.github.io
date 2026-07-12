@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://open-edge-ai-app.github.io/sitemap.xml

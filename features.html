@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore Open Edge AI features: local-first chat, persistent work folders, on-device model runtimes, retrieval, multimodal input, and mobile-native workflows."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#030303" />
+    <meta property="og:title" content="Open Edge AI Features" />
+    <meta property="og:description" content="Local-first mobile AI features mapped to real app surfaces and native runtime modules." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://open-edge-ai-app.github.io/features.html" />
+    <meta property="og:image" content="https://open-edge-ai-app.github.io/assets/demo/home-dark.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://open-edge-ai-app.github.io/features.html" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="icon" type="image/png" href="./assets/open-edge-ai-icon-white.png" />
+    <link rel="apple-touch-icon" href="./assets/open-edge-ai-icon-white.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./pets.js" defer></script>
+    <script src="./site.js" defer></script>
+    <title>Features - Open Edge AI</title>
+  </head>
+  <body>
+    <div class="announcement-bar" role="status">
+      Open Edge AI is MIT licensed and built in public on GitHub.
+      <button type="button" aria-label="Dismiss announcement">×</button>
+    </div>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Open Edge AI home">
+        <img class="brand-logo" src="./assets/open-edge-ai-brand-white.png" alt="Open Edge AI" />
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="active" href="./features.html">Product</a>
+        <a href="./docs/">Docs</a>
+        <a href="./community.html">Community</a>
+        <a href="./releases.html">Releases</a>
+        <a href="./pricing.html">Pricing</a>
+      </nav>
+      <a class="header-action" href="https://github.com/open-edge-ai-app/core-app">
+        Open GitHub
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M13.5 5 20 11.5 13.5 18l-1.42-1.42 4.08-4.08H4v-2h12.16L12.08 6.42 13.5 5Z" /></svg>
+      </a>
+    </header>
+
+    <main class="content-page">
+      <section class="page-hero">
+        <div>
+          <p class="page-kicker">Product</p>
+          <h1>Private AI work, shaped for the device in your hand.</h1>
+          <p>
+            Open Edge AI combines a mobile chat workspace with local model
+            lifecycle, retrieval, multimodal requests, and persistent project context.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-band">
+        <div class="overview-split">
+          <div class="overview-copy">
+            <p class="eyebrow">Local-first workspace</p>
+            <h2>Conversations become reusable project context.</h2>
+            <p>
+              Sessions, work folders, selected models, display preferences, and
+              drafts persist across the app. Native runtimes keep model and
+              retrieval work close to the device whenever the platform allows it.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="./docs/getting-started.html">Get Started</a>
+              <a class="button button-secondary" href="./todo.html">Explore Todo</a>
+            </div>
+          </div>
+          <figure class="overview-media">
+            <img src="./assets/demo/home-dark.png" alt="Open Edge AI project and chat interface" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="content-band alt">
+        <div class="band-header">
+          <div>
+            <p class="eyebrow">Core capabilities</p>
+            <h2>Visible product surfaces backed by native modules.</h2>
+          </div>
+          <p>
+            The feature list reflects the current repository: a React Native
+            Android shell, native SwiftUI on iOS, and platform-specific AI runtimes.
+          </p>
+        </div>
+        <div class="feature-detail-grid">
+          <article class="feature-detail"><span>01</span><h3>Local-first chat</h3><p>Model selection, persistent sessions, drafts, recent conversations, and private context in a mobile-native chat surface.</p></article>
+          <article class="feature-detail"><span>02</span><h3>Work folders</h3><p>Group conversations by project, pin important work, and attach shared folder memory to recurring tasks.</p></article>
+          <article class="feature-detail"><span>03</span><h3>Model lifecycle</h3><p>Native status, download, load, unload, cancellation, and runtime diagnostics exposed through a typed bridge.</p></article>
+          <article class="feature-detail"><span>04</span><h3>Retrieval and indexing</h3><p>Device-side embeddings, vector persistence, similarity lookup, and background indexing for local project material.</p></article>
+          <article class="feature-detail"><span>05</span><h3>Multimodal requests</h3><p>A typed request path for text, files, images, and richer attachments that can be routed to compatible runtimes.</p></article>
+          <article class="feature-detail"><span>06</span><h3>Todo workflows</h3><p>List and calendar views turn chat output into scheduled work and make priority recommendations visible.</p></article>
+        </div>
+      </section>
+
+      <section class="content-band">
+        <div class="band-header">
+          <div><p class="eyebrow">Platforms</p><h2>One project, platform-native responsibilities.</h2></div>
+          <p>Shared product intent does not erase platform differences. Each target owns the runtime and interaction work it can do best.</p>
+        </div>
+        <div class="platform-list">
+          <div class="platform-row"><strong>Android</strong><p>React Native UI with Kotlin bridge modules for routing, embeddings, model status, vector storage, and indexing workers.</p><a href="./docs/architecture.html">Architecture</a></div>
+          <div class="platform-row"><strong>iOS</strong><p>Native SwiftUI shell with Apple Foundation Models and Gemma runtime paths for local generation.</p><a href="./docs/local-models.html">Model guide</a></div>
+          <div class="platform-row"><strong>Web preview</strong><p>Vite and React Native Web provide a fast UI iteration target with development fallbacks for native calls.</p><a href="./docs/development.html">Development</a></div>
+        </div>
+      </section>
+
+      <section class="content-band alt">
+        <div class="band-header">
+          <div><p class="eyebrow">Go deeper</p><h2>Follow the implementation, not just the screenshots.</h2></div>
+          <p>Read the project guides, inspect the native contract, or join the community workflow.</p>
+        </div>
+        <div class="link-card-grid">
+          <a class="link-card" href="./docs/"><span>DOCS</span><div><h3>Documentation</h3><p>Setup, architecture, models, bridge contracts, and development checks.</p></div><strong>Read docs →</strong></a>
+          <a class="link-card" href="./community.html"><span>COMMUNITY</span><div><h3>Contribute</h3><p>Issue workflow, pull request expectations, security reporting, and project conduct.</p></div><strong>Join the project →</strong></a>
+          <a class="link-card" href="./releases.html"><span>RELEASES</span><div><h3>Track progress</h3><p>Current development status, release notes, and installable artifact guidance.</p></div><strong>View releases →</strong></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="./index.html"><img src="./assets/open-edge-ai-brand-white.png" alt="Open Edge AI" /><span>Local-first mobile AI, released under the MIT License.</span></a>
+      <div class="footer-links"><a href="./docs/">Documentation</a><a href="./community.html">Community</a><a href="./releases.html">Releases</a><a href="./support.html">Support & Security</a><a href="https://github.com/open-edge-ai-app/core-app">GitHub</a></div>
+    </footer>
+  </body>
+</html>

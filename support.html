@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Get community support, report bugs, disclose vulnerabilities privately, or discuss commercial support for Open Edge AI." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#030303" />
+    <meta property="og:title" content="Open Edge AI Support and Security" />
+    <meta property="og:description" content="Community help, private security reporting, and optional commercial support." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://open-edge-ai-app.github.io/support.html" />
+    <meta property="og:image" content="https://open-edge-ai-app.github.io/assets/open-edge-ai-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://open-edge-ai-app.github.io/support.html" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="icon" type="image/png" href="./assets/open-edge-ai-icon-white.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./site.js" defer></script>
+    <title>Support and Security - Open Edge AI</title>
+  </head>
+  <body>
+    <div class="announcement-bar" role="status">Security vulnerabilities should never be reported in a public issue.<button type="button" aria-label="Dismiss announcement">×</button></div>
+    <header class="site-header"><a class="brand" href="./index.html" aria-label="Open Edge AI home"><img class="brand-logo" src="./assets/open-edge-ai-brand-white.png" alt="Open Edge AI" /></a><nav class="site-nav" aria-label="Primary navigation"><a href="./features.html">Product</a><a href="./docs/">Docs</a><a href="./community.html">Community</a><a href="./releases.html">Releases</a><a href="./pricing.html">Pricing</a></nav><a class="header-action" href="https://github.com/open-edge-ai-app/core-app/issues">Open Issues<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M13.5 5 20 11.5 13.5 18l-1.42-1.42 4.08-4.08H4v-2h12.16L12.08 6.42 13.5 5Z" /></svg></a></header>
+    <main class="content-page">
+      <section class="page-hero"><div><p class="page-kicker">Support & Security</p><h1>Use the right path for the issue.</h1><p>Community support is best effort. Reproducible bugs belong in GitHub Issues, vulnerabilities use private reporting, and commercial engagements are optional.</p></div></section>
+      <section class="content-band"><div class="band-header"><div><p class="eyebrow">Support routes</p><h2>Give maintainers the context needed to help.</h2></div><p>Search existing reports first. Include only the minimum sensitive information required to reproduce a problem.</p></div><div class="support-list"><div class="support-row"><strong>Bug report</strong><p>Include platform, device, version or commit, steps to reproduce, expected behavior, actual behavior, and relevant logs.</p><a href="https://github.com/open-edge-ai-app/core-app/issues">Open issue</a></div><div class="support-row"><strong>Setup help</strong><p>Check the getting started and development guides before opening an issue with exact command output.</p><a href="./docs/getting-started.html">Read guide</a></div><div class="support-row"><strong>Feature request</strong><p>Describe the user problem, affected workflow, constraints, and why the change belongs in the core project.</p><a href="https://github.com/open-edge-ai-app/core-app/issues">Propose feature</a></div><div class="support-row"><strong>Security report</strong><p>Use GitHub private vulnerability reporting when available. Do not include exploit details in a public issue.</p><a href="https://github.com/open-edge-ai-app/core-app/security">Report privately</a></div></div></section>
+      <section class="content-band alt"><div class="band-header"><div><p class="eyebrow">Security scope</p><h2>Private data and native capability boundaries matter.</h2></div><p>Relevant reports include unsafe local file handling, private chat or embedding leakage, insecure model delivery, bridge misuse, and shipped dependency vulnerabilities.</p></div><div class="feature-detail-grid"><article class="feature-detail"><span>FILES</span><h3>Local content</h3><p>Unsafe attachment, file URL, content URI, or indexed document handling that could expose data.</p></article><article class="feature-detail"><span>MODELS</span><h3>Runtime integrity</h3><p>Model download validation, incompatible assets, unsafe loading, or runtime behavior that crosses intended boundaries.</p></article><article class="feature-detail"><span>BRIDGE</span><h3>Native access</h3><p>React Native bridge behavior that unexpectedly exposes device capabilities, files, or long-lived state.</p></article></div></section>
+      <section class="content-band"><div class="band-header"><div><p class="eyebrow">Commercial support</p><h2>Support the project without changing the license.</h2></div><p>Open Edge AI is MIT licensed. Voluntary sponsorship, integration work, infrastructure help, and paid technical support do not add restrictions to the open-source license.</p></div><div class="doc-callout">Organizations using Open Edge AI for revenue, internal operations, or client work are encouraged to support maintenance through engineering contributions, sponsorship, infrastructure, documentation, or a scoped support contract.</div></section>
+    </main>
+    <footer class="site-footer"><a class="footer-brand" href="./index.html"><img src="./assets/open-edge-ai-brand-white.png" alt="Open Edge AI" /><span>Community support is best effort. Security reports remain private.</span></a><div class="footer-links"><a href="./docs/">Documentation</a><a href="./community.html">Community</a><a href="./releases.html">Releases</a><a href="https://github.com/open-edge-ai-app/core-app/security">Security</a><a href="https://github.com/open-edge-ai-app/core-app">GitHub</a></div></footer>
+  </body>
+</html>

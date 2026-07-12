@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Open Edge AI development guide with scripts, Android and iOS setup, web preview, quality checks, generated file policy, and troubleshooting." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#030303" />
+    <meta property="og:title" content="Open Edge AI Development Guide" />
+    <meta property="og:description" content="Scripts, platform setup, quality gates, and troubleshooting for contributors." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://open-edge-ai-app.github.io/docs/development.html" />
+    <meta property="og:image" content="https://open-edge-ai-app.github.io/assets/open-edge-ai-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://open-edge-ai-app.github.io/docs/development.html" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" href="/assets/open-edge-ai-icon-white.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/site.js" defer></script>
+    <title>Development Guide - Open Edge AI Docs</title>
+  </head>
+  <body>
+    <div class="announcement-bar" role="status">Run lint, type checking, and tests before opening a pull request.<button type="button" aria-label="Dismiss announcement">×</button></div>
+    <header class="site-header"><a class="brand" href="/" aria-label="Open Edge AI home"><img class="brand-logo" src="/assets/open-edge-ai-brand-white.png" alt="Open Edge AI" /></a><nav class="site-nav" aria-label="Primary navigation"><a href="/features.html">Product</a><a class="active" href="/docs/">Docs</a><a href="/community.html">Community</a><a href="/releases.html">Releases</a><a href="/pricing.html">Pricing</a></nav><a class="header-action" href="https://github.com/open-edge-ai-app/core-app">Open GitHub<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M13.5 5 20 11.5 13.5 18l-1.42-1.42 4.08-4.08H4v-2h12.16L12.08 6.42 13.5 5Z" /></svg></a></header>
+    <main class="docs-main"><div class="docs-shell">
+      <aside class="docs-sidebar" aria-label="Documentation navigation"><p>Start</p><a href="./">Overview</a><a href="./getting-started.html">Getting started</a><p>Understand</p><a href="./architecture.html">Architecture</a><a href="./local-models.html">Local models</a><a href="./native-bridge.html">Native bridge</a><p>Build</p><a class="active" href="./development.html">Development</a><a href="/community.html">Contributing</a></aside>
+      <article class="docs-article">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Docs</a><span>/</span><span>Development</span></nav>
+        <h1>Development</h1>
+        <p class="doc-lead">Use the platform command that matches your work, keep generated files out of Git, and run the repository quality checks before review.</p>
+        <h2>Common scripts</h2>
+        <table class="docs-table"><thead><tr><th>Command</th><th>Purpose</th></tr></thead><tbody><tr><td><code>npm start</code></td><td>Start Metro for Android development.</td></tr><tr><td><code>npm run android</code></td><td>Build, install, reverse port 8082, and launch Android.</td></tr><tr><td><code>npm run android:activate</code></td><td>Reapply the port reverse and foreground the installed app.</td></tr><tr><td><code>npm run ios:pods</code></td><td>Install CocoaPods dependencies for the native iOS app.</td></tr><tr><td><code>npm run ios</code></td><td>Build, install, and launch native iOS.</td></tr><tr><td><code>npm run web</code></td><td>Start the Vite browser preview.</td></tr><tr><td><code>npm run build:installers</code></td><td>Generate Android debug and iOS simulator artifacts.</td></tr></tbody></table>
+        <h2>Android development</h2>
+        <pre class="code-block">npm run start:android
+npm run android</pre>
+        <p>The scripts use Metro port 8082 and apply <code>adb reverse tcp:8082 tcp:8082</code>. This avoids collisions with unrelated development servers on port 8081.</p>
+        <h2>iOS development</h2>
+        <pre class="code-block">npm run ios:pods
+npm run ios</pre>
+        <p>The helper requires full Xcode, installs Pods when missing, builds the <code>OpenEdgeAI</code> workspace, installs the simulator app, and launches it. Metro is not part of the native iOS path.</p>
+        <h2>Quality checks</h2>
+        <pre class="code-block">npm run lint
+npx tsc --noEmit
+npm test -- --runInBand</pre>
+        <h2>Do not commit</h2>
+        <ul><li><code>node_modules/</code></li><li><code>dist/</code> installer output</li><li>CocoaPods and platform build output</li><li>Android or Xcode derived data</li><li>Local model binaries</li><li>Credentials, signing secrets, or personal machine configuration</li></ul>
+        <h2>Troubleshooting</h2>
+        <h3>Metro port conflict</h3><p>Use the repository's Android 8082 scripts and confirm the device sees the matching reverse mapping.</p>
+        <h3>Missing Android SDK</h3><p>Set <code>ANDROID_HOME</code> or <code>ANDROID_SDK_ROOT</code> and confirm Android platform tools are available on <code>PATH</code>.</p>
+        <h3>Missing model file</h3><p>The app can start without a bundled model, but generation may request a compatible local asset. Follow the local models guide and do not commit the binary.</p>
+        <h3>UI works in web, native call does not</h3><p>The browser uses development fallbacks. Reproduce on the target mobile platform and inspect the native runtime and bridge status.</p>
+      </article>
+    </div></main>
+    <footer class="site-footer"><a class="footer-brand" href="/"><img src="/assets/open-edge-ai-brand-white.png" alt="Open Edge AI" /><span>Focused changes, proportional tests, and documented platform behavior.</span></a><div class="footer-links"><a href="./getting-started.html">Getting Started</a><a href="./architecture.html">Architecture</a><a href="/community.html">Contributing</a><a href="/support.html">Support</a><a href="https://github.com/open-edge-ai-app/core-app">GitHub</a></div></footer>
+  </body>
+</html>
